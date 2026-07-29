@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#fdf8f5;
+    font-family:Arial,sans-serif;
+}
+
+.player{
+    text-align:center;
+}
+
+button{
+    width:80px;
+    height:80px;
+    border:none;
+    border-radius:50%;
+    font-size:32px;
+    background:#b8896b;
+    color:white;
+    cursor:pointer;
+}
+
+img{
+    width:220px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="player">
+
+<img src="foto.jpg" alt="Nosotros">
+
+<br>
+
+<button onclick="playMusic()">▶</button>
+
+<audio id="music">
+    <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
