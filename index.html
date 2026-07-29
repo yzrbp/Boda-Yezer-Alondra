@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body{
     margin:0;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
     background:#DAD7D2;
     font-family:Arial,sans-serif;
 }
@@ -18,6 +19,20 @@ body{
     text-align:center;
 }
 
+/* Imagen */
+img{
+    width:100%;
+    max-width:500px;
+    height:auto;
+    border-radius:15px;
+    margin-bottom:20px;
+
+    /* Fade In */
+    opacity:0;
+    animation:fadeIn 2s ease forwards;
+}
+
+/* Botón */
 button{
     width:80px;
     height:80px;
@@ -27,15 +42,29 @@ button{
     background:#b8896b;
     color:white;
     cursor:pointer;
+
+    transition:.3s;
 }
 
-img{
-    width:500px;
-    border-radius:15px;
-    margin-bottom:20px;
+button:hover{
+    transform:scale(1.08);
+    background:#a9795d;
+}
+
+/* Animación */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 </style>
 </head>
+
 <body>
 
 <div class="player">
@@ -44,7 +73,7 @@ img{
 
 <br>
 
-<button onclick="playMusic()">▶</button>
+<button onclick="playMusic()">▶️</button>
 
 <audio id="music">
     <source src="All About Us.mp3" type="audio/mpeg">
